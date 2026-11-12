@@ -1,0 +1,31 @@
+@host = http://localhost:5080
+
+### Lister les pizzas
+GET {{host}}/pizzas
+
+### Lire une pizza
+GET {{host}}/pizzas/1
+
+### Créer une pizza
+POST {{host}}/pizzas
+Content-Type: application/json
+
+{ "name": "Calzone", "description": "Pizza pliée : tomate, mozzarella, jambon" }
+
+### Créer avec un nom vide -> 400
+POST {{host}}/pizzas
+Content-Type: application/json
+
+{ "name": "", "description": "invalide" }
+
+### Modifier une pizza
+PUT {{host}}/pizzas/1
+Content-Type: application/json
+
+{ "name": "Margherita royale", "description": "Tomate, mozzarella di bufala, basilic" }
+
+### Supprimer une pizza
+DELETE {{host}}/pizzas/1
+
+### Pizza inexistante -> 404
+GET {{host}}/pizzas/9999

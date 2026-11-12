@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="P5AspEntity/P5AspEntity.csproj" />
+  <Project Path="P8Maui/P8Maui.csproj" />
+</Solution>

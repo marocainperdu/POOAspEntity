@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="P8Maui.Views.AboutPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="À propos">
+
+    <VerticalStackLayout Spacing="12" Margin="20">
+        <Label Text="{Binding AppName}" FontSize="28" FontAttributes="Bold" />
+        <Label Text="{Binding Version}" Style="{StaticResource NoteDateLabel}" />
+        <Label Text="{Binding Description}" />
+        <Button Text="En savoir plus..." Command="{Binding LearnMoreCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
